@@ -13,6 +13,14 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+const db = require('./app/config/db.config.js');
+
+db.sequelize.sync().then(() => {
+    console.log('Syncronized with DB!');
+});
+
+require('./app/route/report.route.js')(app);
+
 // Create a Server
 var server = app.listen(8080, function () {
 
