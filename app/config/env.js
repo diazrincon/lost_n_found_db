@@ -1,8 +1,8 @@
 const env = {
     database: 'lost_items',
     username: 'finder',
-    password: 'admin',
-    host: '192.168.1.44',
+    password: '',
+    host: '',
     dialect: 'mariadb',
     pool: {
         max: 5,
